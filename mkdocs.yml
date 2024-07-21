@@ -1,0 +1,6 @@
+site_name: Session.js Docs
+theme:
+  name: material
+  logo: assets/logo.jpeg
+  palette:
+    primary: green
