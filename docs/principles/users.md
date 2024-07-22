@@ -42,3 +42,11 @@ Usernames are a popular way to access each other's chats without remembering who
 
 [@session.js/ons](https://github.com/sessionjs/ons) handles resolving ONS->Session ID encryption logic for you, so you just have to provide ONS and you'll receive Session ID.
 Alternatively, there is [https://ons.sessionbots.directory/](https://ons.sessionbots.directory/) which is a registry of ONS names with local client-side quick search among all registered ONS names in Session network.
+
+## How Session profiles work?
+
+As previously discussed, there are no accounts in Session, so you can't get profile by account ID like in Telegram or any other centralized messenger or social media. Moreover, for privacy, Session clients shouldn't show profile display name and avatar unless user accepts conversation request or explicitly agrees to share profile with recipient. Instead of fetching it everytime, profiles in Session are saved locally in database for contacts.
+
+Profile data comes with each visible chat message and with conversation request accepted message. So each time Session client sends a message to another user or accepts a request to talk, this message also contains your display name and avatar — that's how they're updated in local databases of other clients.
+
+To be clear: **there is no way to get avatar or display name of specific Session ID unless they send that data inside of encrypted chat message bubble.** Until Session client received display name and avatar in either of these messages, it should display just Session ID.

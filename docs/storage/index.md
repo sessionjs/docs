@@ -1,4 +1,4 @@
-## Storage
+# Storage
 
 You can use any existing storage adapter or [write your own](#creating-new-storage-adapter)
 
@@ -9,12 +9,12 @@ You can use any existing storage adapter or [write your own](#creating-new-stora
 <td> Storage type </td> <td> Description </td>
 </tr>
 <tr>
-<td><a href="/storage/in-memory-storage.md">In-memory</a></td>
-<td>**Default** storage that stores data in memory, that is reset after this process exits or tab is closed. Ideal for short living one-time bots or testing. It is not persistant.</td>
+<td><a href="./in-memory">In-memory</a></td>
+<td><b>Default</b> storage that stores data in memory, that is reset after this process exits or tab is closed. Ideal for short living one-time bots or testing. It is not persistant.</td>
 </tr>
 
 <tr>
-<td><a href="./file-keyval-storage.md">Persistant file-based key=value storage with `fs`</a></td>
+<td><a href="./file-keyval">Persistant file-based key=value storage with `fs`</a></td>
 <td>Simple storage that stores everything in memory and periodically syncs it with locally stored file in key=value format. `filePath` is optional and defaults to `./storage.db` </td>
 </tr>
 

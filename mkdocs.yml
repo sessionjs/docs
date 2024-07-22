@@ -3,4 +3,59 @@ theme:
   name: material
   logo: assets/logo.jpeg
   palette:
-    primary: green
+    - scheme: default
+      primary: green
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+    - scheme: slate
+      primary: green
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+markdown_extensions:
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+extra_css:
+  - css/custom.css
+nav:
+  - Home: 
+    - Home: index.md
+    - Getting started: getting-started.md
+  - Documentation:
+    - Sending messages: sending.md
+    - Polling messages: polling.md
+    - Events: events.md
+    - Storage:
+      - storage/index.md
+      - In-memory: storage/in-memory.md
+      - File-based persistant: storage/file-keyval.md
+    - Network: 
+      - network/index.md
+      - Bun local: network/bun-local.md
+      - Bun remote: network/bun-remote.md
+    - Files and attachments: files-and-attachments.md
+    - Reactions: reactions.md
+    - Deleting messages: deleting-messages.md
+    - Set name and avatar: profile.md
+    - Mark message as read: mark-as-read.md
+    - Show or hide typing indicator: typing-indicator.md
+    - Accept conversation request: accept-conversation-request.md
+    - Send "screenshot taken" message: screenshot-taken-notification.md
+    - Send "media saved" message: media-saved-notification.md
+    - Error handling: error-handling.md
+    - Constants: constants.md
+  - How Session Works:
+    - Accounts in Session: principles/users.md
+    - Messages in Session: principles/messages.md
+    - Files in Session: principles/files.md
+  - Utilities:
+    - Mnemonic: mnemonic.md
+    - Oxen Name System (ONS): ons.md

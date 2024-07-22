@@ -77,7 +77,7 @@ await session.sendMessage({
 
 ### Polling messages
 
-Check [documentation](https://sessionjs.github.io/docs/docs) for more info and examples on polling.
+Check [polling page](./polling.md) for more info and examples on polling.
 
 ```ts
 import { Session, Poller, ready } from '@session.js/client'

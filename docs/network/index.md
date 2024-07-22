@@ -9,15 +9,15 @@ You can pick existing network connector or [write your own](#creating-new-networ
 <td> Network type </td> <td> Supports onion routing </td> <td> Description </td>
 </tr>
 <tr>
-<td><a href="./bun-local.md">Bun (local)</a></td>
+<td><a href="./bun-local">Bun (local)</a></td>
 <td>❌</td>
 <td> This network type is default and simpliest. It is intended to be used in the same process that @session.js/client instances run in. It's ideal if you just want to start and doing everything on server in one project without browser or other parts. </td>
 </tr>
 
 <tr>
-<td><a href="./bun-remote.md">Bun (remote) for proxies</a></td>
+<td><a href="./bun-remote">Bun (remote) for proxies</a></td>
 <td>❌</td>
-<td> This network might be useful if you're building client in environment that does not allow you sending requests to Session nodes with self-signed certificates. This option is ideal for browser clients, because it handles all network connection on backend proxy that forwards client-side encrypted data to snodes. Check out simple <a href="">browser example here</a>https://github.com/sessionjs/examples. </td>
+<td> This network might be useful if you're building client in environment that does not allow you sending requests to Session nodes with self-signed certificates. This option is ideal for browser clients, because it handles all network connection on backend proxy that forwards client-side encrypted data to snodes. Check out simple <a href="https://github.com/sessionjs/examples">browser example here</a>. </td>
 </tr>
 
 </table>

@@ -1,4 +1,4 @@
-# ONS
+# Oxen Name System (ONS)
 
 ONS is a system of usernames that links you to registered Session ID mapping and allows you to buy mapping for a few other lokinet products. For more info on ONS, go to [What is ONS?](./principles/users.md#what-is-ons)
 
