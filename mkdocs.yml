@@ -41,6 +41,7 @@ markdown_extensions:
   - admonition
   - pymdownx.details
 plugins:
+  - search
   - mkdocs-simple-hooks:
       hooks:
         on_post_build: "docs.hooks:copy_get"
