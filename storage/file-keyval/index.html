@@ -820,7 +820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../files-and-attachments.md" class="md-nav__link">
+      <a href="../../files-and-attachments/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -862,7 +862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deleting-messages.md" class="md-nav__link">
+      <a href="../../deleting-messages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -904,7 +904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mark-as-read.md" class="md-nav__link">
+      <a href="../../mark-as-read/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -925,7 +925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../typing-indicator.md" class="md-nav__link">
+      <a href="../../typing-indicator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -946,7 +946,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../accept-conversation-request.md" class="md-nav__link">
+      <a href="../../accept-conversation-request/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -967,7 +967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../screenshot-taken-notification.md" class="md-nav__link">
+      <a href="../../screenshot-taken-notification/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -988,7 +988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../media-saved-notification.md" class="md-nav__link">
+      <a href="../../media-saved-notification/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1325,11 +1325,11 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>bun add @session.js/file-keyval-storage
 </code></pre></div>
 <h2 id="use-with-sessionjs">Use with Session.js</h2>
-<p><code>filePath</code> is optional and defaults to ./storage.db</p>
+<p>This type of storage only works in server environments, because it uses fs module to access user's file system. <code>filePath</code> is optional and defaults to ./storage.db</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Session</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@session.js/client&#39;</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">FileKeyvalStorage</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@session.js/file-keyval-storage&#39;</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="ow">new</span><span class="w"> </span><span class="nx">Session</span><span class="p">({</span><span class="w"> </span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="ow">new</span><span class="w"> </span><span class="nx">Session</span><span class="p">({</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nx">storage</span><span class="o">:</span><span class="w"> </span><span class="kt">new</span><span class="w"> </span><span class="nx">FileKeyvalStorage</span><span class="p">({</span><span class="w"> </span>
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nx">filePath</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;some-file-path.db&#39;</span><span class="w"> </span>
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="p">})</span>

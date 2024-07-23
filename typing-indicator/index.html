@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../deleting-messages/">
+        <link rel="prev" href="../mark-as-read/">
       
       
-        <link rel="next" href="../mark-as-read/">
+        <link rel="next" href="../accept-conversation-request/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Set name and avatar - Session.js Docs</title>
+        <title>Show or hide typing indicator - Session.js Docs</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#profile-customization" class="md-skip">
+        <a href="#typing-indicator" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Set name and avatar
+              Show or hide typing indicator
             
           </span>
         </div>
@@ -820,30 +820,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Set name and avatar
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../profile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -852,44 +832,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#display-name" class="md-nav__link">
-    <span class="md-ellipsis">
-      Display name
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#avatar" class="md-nav__link">
-    <span class="md-ellipsis">
-      Avatar
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -920,10 +862,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../typing-indicator/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Show or hide typing indicator
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -932,6 +894,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#events-about-typing-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Events about typing indicators
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1285,18 +1276,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#display-name" class="md-nav__link">
+  <a href="#events-about-typing-indicators" class="md-nav__link">
     <span class="md-ellipsis">
-      Display name
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#avatar" class="md-nav__link">
-    <span class="md-ellipsis">
-      Avatar
+      Events about typing indicators
     </span>
   </a>
   
@@ -1317,40 +1299,27 @@
                   
 
 
-<h1 id="profile-customization">Profile customization</h1>
-<p>Session allows you to set display name and avatar for your Session ID. This article explains how to customize your profile using Session.js</p>
-<div class="admonition info">
-<p class="admonition-title">See also</p>
-<ul>
-<li><a href="../principles/users/#how-session-profiles-work">How Session profiles work?</a></li>
-</ul>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Session.js currently does not support syncing profile between devices, you will likely run into problems if you try to use up-to-date official Session clients and Session.js at the same time. This is because they've switched from ConfigurationMessage to SharedDataConfig message which is generated in libsession-util code which is written in C/C++. Help is needed to resolve this issue, from someone who knows both C and JS</p>
-</div>
-<h2 id="display-name">Display name</h2>
-<p>Initially you can set display name in setMnemonic method which takes display name as optional second argument.</p>
+<h1 id="typing-indicator">Typing indicator</h1>
+<p>Session.js allows you to show/hide typing indicator in 1-1 conversations. You should only call this method if user explicitly agreed to share typing state with recipient(s).</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Session</span><span class="p">,</span><span class="w"> </span><span class="nx">ready</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@session.js/client&#39;</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">await</span><span class="w"> </span><span class="nx">ready</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">mnemonic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;love love love love love love love love love love love love love&#39;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kd">const</span><span class="w"> </span><span class="nx">displayName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;My Session bot&#39;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="kd">const</span><span class="w"> </span><span class="nx">session</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Session</span><span class="p">()</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nx">session</span><span class="p">.</span><span class="nx">setMnemonic</span><span class="p">(</span><span class="nx">mnemonic</span><span class="p">,</span><span class="w"> </span><span class="nx">displayName</span><span class="p">)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kd">const</span><span class="w"> </span><span class="nx">session</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Session</span><span class="p">()</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nx">session</span><span class="p">.</span><span class="nx">setMnemonic</span><span class="p">(</span><span class="nx">mnemonic</span><span class="p">)</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">await</span><span class="w"> </span><span class="nx">session</span><span class="p">.</span><span class="nx">showTypingIndicator</span><span class="p">({</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="nx">conversation</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;057aeb66e45660c3bdfb7c62706f6440226af43ec13f3b6f899c1dd4db1b8fce5b&#39;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">})</span>
 </code></pre></div>
-<p>or you can change it later:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">await</span><span class="w"> </span><span class="nx">session</span><span class="p">.</span><span class="nx">setDisplayName</span><span class="p">(</span><span class="s1">&#39;My new Session bot name&#39;</span><span class="p">)</span>
+<p>Typing indicators last for 20 seconds, after that clients will hide it until the next showTypingIndicator call.</p>
+<p>Hide typing indicator early:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">await</span><span class="w"> </span><span class="nx">session</span><span class="p">.</span><span class="nx">hideTypingIndicator</span><span class="p">({</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nx">conversation</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;057aeb66e45660c3bdfb7c62706f6440226af43ec13f3b6f899c1dd4db1b8fce5b&#39;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">})</span>
 </code></pre></div>
-<h2 id="avatar">Avatar</h2>
-<p>Just like regular attachments, avatars size is limited to 10 mb. It is recommended to use widely-supported image formats, such as JPEG and PNG to avoid compatability issues with other clients. Session.js does not perform any validation.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;/Users/kitty/Desktop/avatar.jpeg&#39;</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="nx">filename</span><span class="p">)</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">avatar</span><span class="o">:</span><span class="w"> </span><span class="kt">ArrayBuffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">file</span><span class="p">.</span><span class="nx">buffer</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">await</span><span class="w"> </span><span class="nx">session</span><span class="p">.</span><span class="nx">setAvatar</span><span class="p">(</span><span class="nx">avatar</span><span class="p">)</span>
-</code></pre></div>
+<h2 id="events-about-typing-indicators">Events about typing indicators</h2>
+<p>See <a href="../events/#messagetypingindicator">events page</a></p>
 
 
 

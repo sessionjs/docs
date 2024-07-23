@@ -565,6 +565,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#enablingdisabling-polling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enabling/disabling polling
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -818,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../files-and-attachments.md" class="md-nav__link">
+      <a href="../files-and-attachments/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -860,7 +869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../deleting-messages.md" class="md-nav__link">
+      <a href="../deleting-messages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -902,7 +911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mark-as-read.md" class="md-nav__link">
+      <a href="../mark-as-read/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -923,7 +932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../typing-indicator.md" class="md-nav__link">
+      <a href="../typing-indicator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -944,7 +953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../accept-conversation-request.md" class="md-nav__link">
+      <a href="../accept-conversation-request/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -965,7 +974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../screenshot-taken-notification.md" class="md-nav__link">
+      <a href="../screenshot-taken-notification/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -986,7 +995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../media-saved-notification.md" class="md-nav__link">
+      <a href="../media-saved-notification/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1302,6 +1311,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#enablingdisabling-polling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enabling/disabling polling
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1363,7 +1381,6 @@
 <a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Synced display name&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">displayName</span><span class="p">)</span>
 <a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="p">})</span>
 </code></pre></div>
-<p>You can use methods <code>startPolling</code>, <code>stopPolling</code> and <code>setInterval</code> on Poller instance to control it. Read more in JSDoc hints in your code editor or IDE.</p>
 <h2 id="controlled-polling-on-demand">Controlled polling on demand</h2>
 <p>To disable default interval of 2500 ms, pass <code>interval: null</code> to Poller constructor</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">poller</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Poller</span><span class="p">({</span><span class="w"> </span><span class="nx">interval</span><span class="o">:</span><span class="w"> </span><span class="kt">null</span><span class="w"> </span><span class="p">})</span>
@@ -1373,6 +1390,25 @@
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
 <a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="kd">const</span><span class="w"> </span><span class="nx">messages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">poller</span><span class="p">.</span><span class="nx">poll</span><span class="p">()</span>
 <a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Received messages&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">messages</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="enablingdisabling-polling">Enabling/disabling polling</h2>
+<p>You can use methods <code>startPolling</code>, <code>stopPolling</code> and <code>setInterval</code> on Poller instance to control it after it's alreay added to instance.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">poller</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Poller</span><span class="p">({</span><span class="w"> </span><span class="nx">interval</span><span class="o">:</span><span class="w"> </span><span class="kt">5000</span><span class="w"> </span><span class="p">})</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nx">session</span><span class="p">.</span><span class="nx">addPoller</span><span class="p">(</span><span class="nx">poller</span><span class="p">)</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1">// ... Some time later ...</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="nx">poller</span><span class="p">.</span><span class="nx">stopPolling</span><span class="p">()</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="c1">// ... Some time later ...</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="nx">poller</span><span class="p">.</span><span class="nx">setInterval</span><span class="p">(</span><span class="mf">2500</span><span class="p">)</span><span class="w"> </span><span class="c1">// poll every 2.5 seconds</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="nx">poller</span><span class="p">.</span><span class="nx">startPolling</span><span class="p">()</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="c1">// ... Some time later ...</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="nx">poller</span><span class="p">.</span><span class="nx">setInterval</span><span class="p">(</span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="c1">// manual polling</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="nx">poller</span><span class="p">.</span><span class="nx">poll</span><span class="p">()</span>
 </code></pre></div>
 
 

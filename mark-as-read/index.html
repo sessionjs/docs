@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../deleting-messages/">
+        <link rel="prev" href="../profile/">
       
       
-        <link rel="next" href="../mark-as-read/">
+        <link rel="next" href="../typing-indicator/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Set name and avatar - Session.js Docs</title>
+        <title>Mark message as read - Session.js Docs</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#profile-customization" class="md-skip">
+        <a href="#mark-message-as-read" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Set name and avatar
+              Mark message as read
             
           </span>
         </div>
@@ -820,6 +820,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../profile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Set name and avatar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -836,7 +857,7 @@
           
   
   <span class="md-ellipsis">
-    Set name and avatar
+    Mark message as read
   </span>
   
 
@@ -847,7 +868,7 @@
         
   
   <span class="md-ellipsis">
-    Set name and avatar
+    Mark message as read
   </span>
   
 
@@ -869,18 +890,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#display-name" class="md-nav__link">
+  <a href="#events-about-read-messages" class="md-nav__link">
     <span class="md-ellipsis">
-      Display name
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#avatar" class="md-nav__link">
-    <span class="md-ellipsis">
-      Avatar
+      Events about read messages
     </span>
   </a>
   
@@ -890,27 +902,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../mark-as-read/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Mark message as read
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1285,18 +1276,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#display-name" class="md-nav__link">
+  <a href="#events-about-read-messages" class="md-nav__link">
     <span class="md-ellipsis">
-      Display name
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#avatar" class="md-nav__link">
-    <span class="md-ellipsis">
-      Avatar
+      Events about read messages
     </span>
   </a>
   
@@ -1317,40 +1299,33 @@
                   
 
 
-<h1 id="profile-customization">Profile customization</h1>
-<p>Session allows you to set display name and avatar for your Session ID. This article explains how to customize your profile using Session.js</p>
-<div class="admonition info">
-<p class="admonition-title">See also</p>
-<ul>
-<li><a href="../principles/users/#how-session-profiles-work">How Session profiles work?</a></li>
-</ul>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Session.js currently does not support syncing profile between devices, you will likely run into problems if you try to use up-to-date official Session clients and Session.js at the same time. This is because they've switched from ConfigurationMessage to SharedDataConfig message which is generated in libsession-util code which is written in C/C++. Help is needed to resolve this issue, from someone who knows both C and JS</p>
-</div>
-<h2 id="display-name">Display name</h2>
-<p>Initially you can set display name in setMnemonic method which takes display name as optional second argument.</p>
+<h1 id="mark-message-as-read">Mark message as read</h1>
+<p>Session.js allows you to mark message as read in 1-1 conversations. You should only call this method if user explicitly agreed to share read indicators with recipient(s).</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Session</span><span class="p">,</span><span class="w"> </span><span class="nx">ready</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@session.js/client&#39;</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">await</span><span class="w"> </span><span class="nx">ready</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">mnemonic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;love love love love love love love love love love love love love&#39;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kd">const</span><span class="w"> </span><span class="nx">displayName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;My Session bot&#39;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">session</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Session</span><span class="p">()</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nx">session</span><span class="p">.</span><span class="nx">setMnemonic</span><span class="p">(</span><span class="s1">&#39;love love love love love love love love love love love love love&#39;</span><span class="p">)</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="kd">const</span><span class="w"> </span><span class="nx">session</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Session</span><span class="p">()</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nx">session</span><span class="p">.</span><span class="nx">setMnemonic</span><span class="p">(</span><span class="nx">mnemonic</span><span class="p">,</span><span class="w"> </span><span class="nx">displayName</span><span class="p">)</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nx">session</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="nx">session</span><span class="p">.</span><span class="nx">markMessagesAsRead</span><span class="p">({</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="nx">from</span><span class="o">:</span><span class="w"> </span><span class="kt">message.from</span><span class="p">,</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="nx">messagesTimestamps</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">message</span><span class="p">.</span><span class="nx">timestamp</span><span class="p">],</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="nx">readAt</span><span class="o">:</span><span class="w"> </span><span class="kt">Date.now</span><span class="p">()</span><span class="w"> </span><span class="c1">// optional</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="p">})</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p">})</span>
 </code></pre></div>
-<p>or you can change it later:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">await</span><span class="w"> </span><span class="nx">session</span><span class="p">.</span><span class="nx">setDisplayName</span><span class="p">(</span><span class="s1">&#39;My new Session bot name&#39;</span><span class="p">)</span>
+<p>You can mark multiple messages as read at once</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">session</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nx">session</span><span class="p">.</span><span class="nx">markMessagesAsRead</span><span class="p">({</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nx">from</span><span class="o">:</span><span class="w"> </span><span class="kt">message.from</span><span class="p">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nx">messagesTimestamps</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">message1</span><span class="p">.</span><span class="nx">timestamp</span><span class="p">,</span><span class="w"> </span><span class="nx">message2</span><span class="p">.</span><span class="nx">timestamp</span><span class="p">,</span><span class="w"> </span><span class="nx">message3</span><span class="p">.</span><span class="nx">timestamp</span><span class="p">],</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="c1">// we haven&#39;t provided readAt, so it will fallback to current time</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="p">})</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">})</span>
 </code></pre></div>
-<h2 id="avatar">Avatar</h2>
-<p>Just like regular attachments, avatars size is limited to 10 mb. It is recommended to use widely-supported image formats, such as JPEG and PNG to avoid compatability issues with other clients. Session.js does not perform any validation.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;/Users/kitty/Desktop/avatar.jpeg&#39;</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="nx">filename</span><span class="p">)</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">avatar</span><span class="o">:</span><span class="w"> </span><span class="kt">ArrayBuffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">file</span><span class="p">.</span><span class="nx">buffer</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">await</span><span class="w"> </span><span class="nx">session</span><span class="p">.</span><span class="nx">setAvatar</span><span class="p">(</span><span class="nx">avatar</span><span class="p">)</span>
-</code></pre></div>
+<h2 id="events-about-read-messages">Events about read messages</h2>
+<p>See <a href="../events/#messageread">events page</a></p>
 
 
 

@@ -917,7 +917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../files-and-attachments.md" class="md-nav__link">
+      <a href="../files-and-attachments/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -959,7 +959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../deleting-messages.md" class="md-nav__link">
+      <a href="../deleting-messages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1001,7 +1001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mark-as-read.md" class="md-nav__link">
+      <a href="../mark-as-read/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1022,7 +1022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../typing-indicator.md" class="md-nav__link">
+      <a href="../typing-indicator/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1043,7 +1043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../accept-conversation-request.md" class="md-nav__link">
+      <a href="../accept-conversation-request/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1064,7 +1064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../screenshot-taken-notification.md" class="md-nav__link">
+      <a href="../screenshot-taken-notification/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1085,7 +1085,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../media-saved-notification.md" class="md-nav__link">
+      <a href="../media-saved-notification/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1518,12 +1518,13 @@
 <h1 id="events">Events</h1>
 <p>You can listen to a variety of events to trigger parts of your application that are responsible to react on them.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">session</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Session</span><span class="p">()</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">onMessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">msg</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/**/</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nx">session</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">onMessage</span><span class="p">)</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">// alias: session.addEventListener(&#39;message&#39;, onMessage)</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nx">session</span><span class="p">.</span><span class="nx">off</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">onMessage</span><span class="p">)</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1">// alias: session.removeEventListener(&#39;message&#39;, onMessage)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nx">session</span><span class="p">.</span><span class="nx">setMnemonic</span><span class="p">(</span><span class="s1">&#39;love love love love love love love love love love love love love&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">onMessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">msg</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/**/</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nx">session</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">onMessage</span><span class="p">)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">// alias: session.addEventListener(&#39;message&#39;, onMessage)</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nx">session</span><span class="p">.</span><span class="nx">off</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">onMessage</span><span class="p">)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1">// alias: session.removeEventListener(&#39;message&#39;, onMessage)</span>
 </code></pre></div>
 <h2 id="message"><code>message</code></h2>
 <p>New message received in DM or closed group. For advanced users: this is only emitted for DataMessage i.e. VisibleMessage i.e. message that was sent by user to the chat. This does not include service messages and other events sent by Session clients. Look at this like on a message bubble.</p>
@@ -1599,7 +1600,7 @@
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">})</span>
 </code></pre></div>
 <h2 id="messagedeleted"><code>messageDeleted</code></h2>
-<p><strong>This event will be triggered on the instance that used <a href="./deleting-messages.md">deleteMessage</a></strong></p>
+<p><strong>This event will be triggered on the instance that used <a href="../deleting-messages/">deleteMessage</a></strong></p>
 <p>Message has been deleted.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kr">type</span><span class="w"> </span><span class="nx">MessageDeleted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="cm">/** Timestamp of deleted message sent in that message constructor. Lookup message by timestamp in saved messages */</span>
@@ -1649,7 +1650,7 @@
 <a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="p">})</span>
 </code></pre></div>
 <h2 id="screenshottaken"><code>screenshotTaken</code></h2>
-<p><strong>This event will be triggered on the instance that used <a href="./screenshot-taken-notification.md">notifyScreenshotTaken</a></strong></p>
+<p><strong>This event will be triggered on the instance that used <a href="../screenshot-taken-notification/">notifyScreenshotTaken</a></strong></p>
 <p>"Screenshot taken" message was sent in conversation.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kr">type</span><span class="w"> </span><span class="nx">ScreenshotTakenNotification</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="cm">/** Timestamp when screenshot was taken */</span>
@@ -1666,7 +1667,7 @@
 <a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="p">})</span>
 </code></pre></div>
 <h2 id="mediasaved"><code>mediaSaved</code></h2>
-<p><strong>This event will be triggered on the instance that used <a href="./media-saved-notification.md">notifyMediaSaved</a></strong></p>
+<p><strong>This event will be triggered on the instance that used <a href="../media-saved-notification/">notifyMediaSaved</a></strong></p>
 <p>"Attachment downloaded" message was sent in conversation.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kr">type</span><span class="w"> </span><span class="nx">MediaSavedNotification</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="cm">/** Message&#39;s timestamp which has attachment that was downloaded */</span>
