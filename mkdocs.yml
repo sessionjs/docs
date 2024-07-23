@@ -1,4 +1,7 @@
 site_name: Session.js Docs
+site_url: https://sessionjs.github.io/docs
+repo_url: https://github.com/sessionjs/docs
+repo_name: sessionjs/client
 theme:
   name: material
   logo: assets/logo.jpeg
@@ -17,6 +20,18 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.indexes
+copyright: Created by Viktor Shchelochkov aka <a href="https://hloth.dev" target="_blank" rel="noreferrer">hloth.dev</a>
+extra:
+  social:
+    - icon: material/pencil
+      link: https://github.com/sessionjs/docs
+      name: Edit documentation on GitHub
+    - icon: fontawesome/brands/github
+      link: https://github.com/sessionjs
+      name: Session.js on GitHub
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/sessionjs
+      name: Session.js and other stuff Telegram channel
 markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
