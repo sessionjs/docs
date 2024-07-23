@@ -53,8 +53,6 @@ session.on('syncDisplayName', (displayName) => {
 })
 ```
 
-You can use methods `startPolling`, `stopPolling` and `setInterval` on Poller instance to control it. Read more in JSDoc hints in your code editor or IDE.
-
 ## Controlled polling on demand
 
 To disable default interval of 2500 ms, pass `interval: null` to Poller constructor
@@ -67,4 +65,27 @@ session.addPoller(poller)
 
 const messages = await poller.poll()
 console.log('Received messages', messages)
+```
+
+## Enabling/disabling polling
+
+You can use methods `startPolling`, `stopPolling` and `setInterval` on Poller instance to control it after it's alreay added to instance.
+
+```ts
+const poller = new Poller({ interval: 5000 })
+session.addPoller(poller)
+
+// ... Some time later ...
+
+poller.stopPolling()
+
+// ... Some time later ...
+
+poller.setInterval(2500) // poll every 2.5 seconds
+poller.startPolling()
+
+// ... Some time later ...
+
+poller.setInterval(null) // manual polling
+poller.poll()
 ```

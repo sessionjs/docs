@@ -4,6 +4,7 @@ You can listen to a variety of events to trigger parts of your application that 
 
 ```ts
 const session = new Session()
+session.setMnemonic('love love love love love love love love love love love love love')
 const onMessage = msg => { /**/ }
 session.on('message', onMessage)
 // alias: session.addEventListener('message', onMessage)

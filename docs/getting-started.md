@@ -42,7 +42,8 @@ const response = await session.sendMessage({
 console.log('Sent message with id', response.messageHash)
 ```
 
-[How to use instance with random mnemonic?](./mnemonic.md#generate-random-mnemonic)
+!!! Info "See also"
+    - [How to use instance with random mnemonic?](./mnemonic.md#generate-random-mnemonic)
 
 ### Sending images or files
 

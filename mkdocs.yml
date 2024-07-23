@@ -23,6 +23,8 @@ markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.superfences
+  - admonition
+  - pymdownx.details
 extra_css:
   - css/custom.css
 nav:
