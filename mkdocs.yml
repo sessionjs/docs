@@ -40,6 +40,10 @@ markdown_extensions:
   - pymdownx.superfences
   - admonition
   - pymdownx.details
+plugins:
+  - mkdocs-simple-hooks:
+      hooks:
+        on_post_build: "docs.hooks:copy_get"
 extra_css:
   - css/custom.css
 nav:
