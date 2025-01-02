@@ -2,137 +2,142 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://sessionjs.github.io/docs/</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sessionjs.github.io/docs/accept-conversation-request/</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sessionjs.github.io/docs/constants/</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sessionjs.github.io/docs/deleting-messages/</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sessionjs.github.io/docs/error-handling/</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sessionjs.github.io/docs/events/</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sessionjs.github.io/docs/files-and-attachments/</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sessionjs.github.io/docs/getting-started/</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sessionjs.github.io/docs/mark-as-read/</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sessionjs.github.io/docs/media-saved-notification/</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sessionjs.github.io/docs/mnemonic/</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sessionjs.github.io/docs/ons/</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sessionjs.github.io/docs/polling/</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sessionjs.github.io/docs/profile/</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sessionjs.github.io/docs/reactions/</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sessionjs.github.io/docs/screenshot-taken-notification/</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sessionjs.github.io/docs/sending/</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2025-01-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://sessionjs.github.io/docs/sogs/</loc>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sessionjs.github.io/docs/typing-indicator/</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sessionjs.github.io/docs/network/</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sessionjs.github.io/docs/network/bun-local/</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sessionjs.github.io/docs/network/bun-remote/</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sessionjs.github.io/docs/principles/files/</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sessionjs.github.io/docs/principles/messages/</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sessionjs.github.io/docs/principles/users/</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sessionjs.github.io/docs/storage/</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sessionjs.github.io/docs/storage/file-keyval/</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sessionjs.github.io/docs/storage/in-memory/</loc>
-         <lastmod>2024-07-23</lastmod>
+         <lastmod>2025-01-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
