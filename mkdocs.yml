@@ -72,6 +72,7 @@ nav:
     - Accept conversation request: accept-conversation-request.md
     - Send "screenshot taken" message: screenshot-taken-notification.md
     - Send "media saved" message: media-saved-notification.md
+    - SOGS: sogs.md
     - Error handling: error-handling.md
     - Constants: constants.md
   - How Session Works:
