@@ -133,6 +133,7 @@ SignalService.Content {
 ```ts
 import { Session, ready } from '@session.js/client'
 import { decryptSogsMessageData } from '@session.js/sogs'
+import { VisibleMessage } from '@session.js/schema'
 await ready
 
 const mnemonic = 'love love love love love love love love love love love love love'
@@ -151,9 +152,21 @@ const sogsPublicKey = '8948f2d9046a40e7dbc0a4fd7c29d8a4fe97df1fa69e64f0ab6fc317a
 // (at least in theory, see https://github.com/VityaSchel/blinded-id-converter-website)
 const blind = true
 
+const msg = new VisibleMessage({
+  body: reply,
+  profile: session.getMyProfile(),
+  timestamp: session.getNowWithNetworkOffset(),
+  expirationType: null,
+  expireTimer: null,
+  identifier: crypto.randomUUID(),
+  attachments: [],
+  preview: [],
+  quote: undefined
+})
+
 const { data, signature } = session.encodeSogsMessage({
   serverPk: sogsPublicKey,
-  text: 'Hello world!! here is my message',
+  message: msg
   blind
 })
 const requestBody = JSON.stringify({ data, signature })
